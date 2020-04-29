@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+header {
+    background: #A24CF7;
+    width: 95%;
+    height: auto;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    margin: auto;
+    padding: 2% 2.5% !important;
+}
+
+nav {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 10px 2.5%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a,
+nav ul li a{
+  text-decoration: none;
+  font-weight: 800;
+}
+
+main {
+    width: 95%;
+    padding: 20px 2.5%;
+    margin: auto;
+    min-height: 500px;
+}
+
+footer {
+    background: #A24CF7;
+    width: 95%;
+    padding: 30px 2.5%;
+    color: white;
+    margin: auto;
+}
+
+.status_message {
+    width: 46%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    font-size: 12px ;
+  }
+  
+  .success {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    color: white;
+    background-color: #71dd8a;
+  }
+  
+  .error {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    background-color: #c82333;
+    color: white;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+  }
+
+
