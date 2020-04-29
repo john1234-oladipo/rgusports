@@ -15,6 +15,8 @@ Date: 2020-04-29 21:16:25
 
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE DATABASE rgusports;
+
 -- ----------------------------
 -- Table structure for fixture_players
 -- ----------------------------
@@ -25,11 +27,7 @@ CREATE TABLE `fixture_players` (
   `student_id` int(11) DEFAULT NULL,
   `availability` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `student_id` (`student_id`),
-  KEY `student_id_2` (`student_id`),
-  KEY `fixture_id` (`fixture_id`,`student_id`),
-  CONSTRAINT `fixture_players_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
@@ -51,11 +49,7 @@ CREATE TABLE `fixture_team` (
   `fixture_id` int(11) DEFAULT NULL,
   `student_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `fixture_id` (`fixture_id`,`student_id`),
-  KEY `student_id` (`student_id`),
-  CONSTRAINT `fixture_team_ibfk_1` FOREIGN KEY (`fixture_id`) REFERENCES `fixtures` (`id`),
-  CONSTRAINT `fixture_team_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
@@ -125,11 +119,7 @@ CREATE TABLE `swap_requests` (
   `student_id` int(11) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `fixture_id` (`fixture_id`,`student_id`),
-  KEY `student_id` (`student_id`),
-  KEY `fixture_id_2` (`fixture_id`,`student_id`),
-  CONSTRAINT `swap_requests_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
