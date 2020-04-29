@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +14,8 @@
 <main>
     <section class="form-wrapper">
         <div class="form-box">
-            <h4> RGU:TEAMS <br> STUDENT LOGIN </h4>
+            <h4> RGU:TEAMS <br> STUDENT LOGIN </h4> 
+<p> <a href='../index.php'> go home </a></p>
         </div>
         <?php if(isset($_SESSION['success'])){?>
         <div class="status_message">
