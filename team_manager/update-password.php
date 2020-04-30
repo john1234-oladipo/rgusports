@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+﻿<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +14,7 @@
 <main>
     <section class="form-wrapper">
         <div class="form-box">
-            <h4> RGU:TEAMS <br> TEAM MANAGER LOGIN </h4>
+            <h4> RGU:TEAMS <br> TEAM MANAGER PASSWORD UPDATE </h4>
         </div>
         <?php if(isset($_SESSION['success'])){?>
         <div class="status_message">
@@ -31,23 +31,24 @@
             </div>
         </div>
     <?php } ?>
-        <form action="operations/login.php" method="post">
+        <form action="operations/update-password.php" method="post">
             <div class="form-box">
-                <label>  Manager ID </label>
-                <input type="text" required name="manager_id">
+                <label>  New Password </label>
+                <input type="password" required name="password">
             </div>        
             <div class="form-box">
-                <label>  Password </label>
-                <input type="password" required name="password">
+                <label>  Confirm Password </label>
+                <input type="password" required name="confirm">
             </div>
             <div class="form-box">
-                <input type="submit" value="Login" name="submit">
+                <input type="submit" value="Update Password" name="submit">
             </div>
-            <div class="form-box">
-               Register <a href="signup.php">here</a>
-               <br>
-               <a href="reset.php"> Forgot Password </a> 
-            </div>            
+            <section>
+                <p>
+                    <a href="signup.php"> Register here </a> <br>
+                    <a href="index.php">Login here </a> 
+                </p>
+            </section>
         </form>
     </section>
 </main>

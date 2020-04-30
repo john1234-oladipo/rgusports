@@ -14,7 +14,7 @@
 <main>
     <section class="form-wrapper">
         <div class="form-box">
-            <h4> RGU:TEAMS <br> TEAM MANAGER LOGIN </h4>
+            <h4> RGU:TEAMS <br> TEAM MANAGER PASSWORD RESET </h4>
         </div>
         <?php if(isset($_SESSION['success'])){?>
         <div class="status_message">
@@ -31,23 +31,19 @@
             </div>
         </div>
     <?php } ?>
-        <form action="operations/login.php" method="post">
+        <form action="operations/check.php" method="post">
             <div class="form-box">
-                <label>  Manager ID </label>
-                <input type="text" required name="manager_id">
+                <label>  Manager ID or Email Address </label>
+                <input type="text" required name="details">
             </div>        
             <div class="form-box">
-                <label>  Password </label>
-                <input type="password" required name="password">
+                <input type="submit" value="Reset Password" name="submit">
             </div>
-            <div class="form-box">
-                <input type="submit" value="Login" name="submit">
-            </div>
-            <div class="form-box">
-               Register <a href="signup.php">here</a>
-               <br>
-               <a href="reset.php"> Forgot Password </a> 
-            </div>            
+            <section>
+                <p>
+                    <a href="index.php"> Login here </a> 
+                </p>
+            </section>
         </form>
     </section>
 </main>
