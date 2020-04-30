@@ -48,6 +48,12 @@ require "../../database/database.php";
 
         $sql = "INSERT INTO team_managers (manager_id, full_name, email, password) VALUES ('$manager_id', '$full_name', '$email', '$password')";
         $query = mysqli_query($database, $sql);
+
+        // update chosen team with manager if
+        $team_id = $_POST['team'];
+        mysqli_query($database, "UPDATE teams SET manager_id = '$manager_id' WHERE id = '$team_id'");
+
+        //redirect
         $_SESSION['success'] = 'Registration successful. Please login below';    
         header("location: ../index.php");
     }

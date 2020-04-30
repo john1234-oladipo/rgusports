@@ -177,13 +177,18 @@ DROP TABLE IF EXISTS `teams`;
 CREATE TABLE `teams` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `manager_id` int(11) DEFAULT NULL,
+  `manager_id` int(11) DEFAULT 0,
   `created_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of teams
 -- ----------------------------
 INSERT INTO `teams` VALUES ('1', 'Football', '3000001', '2020-04-29 21:01:44');
 INSERT INTO `teams` VALUES ('2', 'Volleyball', '6732323', '2020-04-29 21:01:45');
+INSERT INTO `teams` VALUES ('4', 'Basketball', '0', '2020-04-30 10:40:52');
+INSERT INTO `teams` VALUES ('5', 'Horse Riding', '2323232', '2020-04-30 10:44:13');
+INSERT INTO `teams` VALUES ('6', 'Badminton', '0', '2020-04-30 10:41:01');
+INSERT INTO `teams` VALUES ('7', 'Cricket', '0', '2020-04-30 10:41:28');
+INSERT INTO `teams` VALUES ('8', 'Rugby', '0', '2020-04-30 10:41:34');

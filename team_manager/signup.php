@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+﻿<?php session_start();
+require '../database/database.php';
+$teams = mysqli_query($database, "SELECT * FROM teams WHERE manager_id = 0");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -51,7 +54,16 @@
             <div class="form-box">
                 <label> Confirm Password </label>
                 <input type="password" required name="confirm">
-            </div>            
+            </div>  
+            <div class="form-box">
+                <label> Select Team </label>
+                <select name="team" required>
+                    <option value="" selected> 
+                    <?php while($row = mysqli_fetch_array($teams)){?>
+                        <option value="<?php echo $row['id']; ?>"> <?php echo $row['name']; ?> </option>
+                    <?php }?>
+                </option>
+            </div>                      
             <div class="form-box">
                 <input type="submit" value="Register" name="submit">
             </div>
